@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cruds Project</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Cruds</h1>
+    <p>Product management system</p>
+    <section class="sec1">
+      <!-- ?upper input section -->
+      <small id="error">Some field is empty</small>
+      <input
+        type="text"
+        placeholder="name"
+        id="nameInput"
+        onkeyup="clcTotal()"
+      />
+      
+      <input
+        type="number"
+        placeholder="price"
+        id="priceInput"
+        class="pricing"
+        onkeyup="clcTotal()"
+      />
+
+      <input
+        type="number"
+        id="taxesInput"
+        placeholder="taxes"
+        class="pricing"
+        onkeyup="clcTotal()"
+      />
+
+      <input
+        type="number"
+        id="adsInput"
+        placeholder="ads"
+        class="pricing"
+        onkeyup="clcTotal()"
+      />
+
+      <input
+        type="number"
+        id="discountInput"
+        placeholder="discount"
+        class="pricing"
+        onkeyup="clcTotal()"
+      />
+
+      <span id="totalParent">Total:<span id="total">0</span></span>
+
+      <input type="number" placeholder="count" id="countInput" />
+      <input type="text" placeholder="category" id="categoryInput" />
+
+      <!-- ?upper input section -->
+
+      <button id="createBtn">Create</button>
+    </section>
+    <section class="sec2">
+      <input type="text" id="searchInput" placeholder="Search" onkeyup="searchTable(this.value)"/>
+
+      <div class="searchButtons">
+        <button onclick="searchMoodSet(this.id)" id="searchN">Search by name</button>
+        <button onclick="searchMoodSet(this.id)" id="searchC">Search by Category</button>
+      </div>
+
+      <button id="dltBtn">Delete All <span id="proAmount"></span></button>
+      <table id="theTable">
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>price</th>
+          <th>taxes</th>
+          <th>Ads</th>
+          <th>discount</th>
+          <th>total</th>
+          <th>category</th>
+          <th>update</th>
+          <th>delete</th>
+        </tr>
+        <tbody id="tbody">
+      
+          
+        </tbody>
+      </table>
+    </section>
+
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,112 @@
+/* !Main style */
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+:root {
+  --gray: #222831;
+  --light-gray: #31363f;
+  --light-blue: #76abae;
+  --white: #eeeeee;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--gray);
+  color: var(--white);
+}
+
+h1,
+p {
+  padding: 14px 0;
+}
+
+section {
+  width: 70%;
+}
+
+/**Buttons style*/
+button {
+  width: 100%;
+  padding: 10px 0;
+  margin: 4px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  background-color: #76abae;
+  color: var(--white);
+  border: none;
+  border-radius: 16px;
+  transition-duration: 0.5s;
+}
+button:hover {
+  transform: scale(1.05);
+  letter-spacing: 0.1rem;
+}
+button:active {
+  transform: translateY(0);
+}
+/**/
+
+input {
+  background-color: var(--light-gray);
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  height: 32px;
+  margin: 6px 2px;
+  padding: 18px 0px;
+  padding-left: 4px;
+  color: var(--white);
+  outline-style: none;
+  transition-duration: 0.5s;
+}
+input:focus {
+  transform: scale(1.1);
+  background-color: black;
+}
+
+/* ?sections style */
+.sec1 {
+  #totalParent {
+    background-color: var(--light-blue);
+    padding: 4px;
+    border-radius: 4px;
+  }
+  #error {
+    font-style: italic;
+    padding-left: 4px;
+    position: relative;
+    top: 4px;
+    color: tomato;
+    display: none;
+  }
+}
+
+.pricing {
+  width: 20%;
+}
+.sec2 {
+  .searchButtons {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    button {
+      width: 40%;
+    }
+  }
+  #dltBtn {
+    width: 100%;
+    display: none;
+  }
+  /* TODO: the td will replaced in javascript*/
+  table {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1rem;
+  }
+}
