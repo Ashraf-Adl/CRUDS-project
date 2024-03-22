@@ -1,2 +1,2 @@
 # CRUDS-project
-this is my first cruds project
+This is my first cruds project

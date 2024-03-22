@@ -1,5 +1,4 @@
 // *inputs variables
-
 const nameI = document.getElementById("nameInput");
 const price = document.getElementById("priceInput");
 const taxes = document.getElementById("taxesInput");
@@ -14,7 +13,6 @@ let errorMsg = document.getElementById("error");
 const searchName = document.getElementById("searchN");
 const searchCat = document.getElementById("searchC");
 const searchInput = document.getElementById("searchInput");
-
 let mood = "create";
 let tmp;
 // *calculate the total
@@ -28,11 +26,9 @@ function clcTotal() {
     total.innerHTML = result;
     totalParent.style.backgroundColor = "#76abae";
   }
-
   return result;
 }
 // * check if the inputs are empty
-
 let createClick = (createBtn.onclick = function () {
   const primaryInputs = [nameI.value, price.value, category.value];
   const checkEmpty = primaryInputs.every((value) => value != "");
@@ -66,7 +62,6 @@ if (localStorage.prodata != null) {
 
 function create() {
   const total = clcTotal();
-
   const proInfo = {
     name: nameI.value.toLowerCase(),
     price: price.value,
@@ -90,7 +85,6 @@ function create() {
     prodata[tmp] = proInfo;
     mood = "create";
   }
-
   localStorage.setItem("prodata", JSON.stringify(prodata));
 
   displayData();
@@ -99,9 +93,7 @@ function create() {
   createBtn.innerHTML = "Create";
   count.style.display = "inline-block";
 }
-
 // * clear the data
-
 function clear() {
   nameI.value = "";
   price.value = "";
@@ -133,7 +125,6 @@ function displayData() {
   </tr>
     `;
   }
-
   document.getElementById("tbody").innerHTML = table;
 
   document.getElementById("proAmount").innerHTML = `[${prodata.length}]`;
